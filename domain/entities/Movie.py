@@ -3,7 +3,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from uuid import uuid4
-from value_objects.MovieRating import MovieRating
+from domain.value_objects.MovieRating import MovieRating
 
 @dataclass
 class Movie:

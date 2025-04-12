@@ -1,5 +1,5 @@
 import unittest
-from value_objects.MovieRating import MovieRating
+from domain.value_objects.MovieRating import MovieRating
 
 class TestMovieRating(unittest.TestCase):
 
