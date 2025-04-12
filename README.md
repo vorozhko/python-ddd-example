@@ -1,4 +1,4 @@
-# Movie Management System
+# Movie Management System (Very simple example of DDD with Python)
 
 This project is a Python-based implementation of a **Domain-Driven Design (DDD)** approach for managing movies. The system is designed to demonstrate the principles of DDD, focusing on separating the domain logic from infrastructure concerns.
 
