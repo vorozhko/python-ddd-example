@@ -22,3 +22,7 @@ class Movie:
         if not self.ratings:
             return 0.0
         return sum(rating.score for rating in self.ratings) / len(self.ratings)
+    
+    def __post_init__(self):
+        if not self.title.isalpha():
+            raise ValueError("Ttitle must have an alpha numberic value")
