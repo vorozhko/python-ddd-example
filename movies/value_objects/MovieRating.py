@@ -1,4 +1,4 @@
-"""MovieRating is a Value object according to DDD"""
+"""MovieRating class contains a movie rating"""
 
 from dataclasses import dataclass
 

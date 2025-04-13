@@ -1,9 +1,9 @@
-"""Movie is an Entity object according to DDD"""
+"""Movie class manages rating list"""
 
 from dataclasses import dataclass, field
 from typing import List
 from uuid import uuid4
-from domain.value_objects.MovieRating import MovieRating
+from movies.value_objects.MovieRating import MovieRating
 
 @dataclass
 class Movie:

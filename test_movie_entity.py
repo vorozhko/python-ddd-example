@@ -1,6 +1,6 @@
 import unittest
-from domain.entities.Movie import Movie
-from domain.value_objects.MovieRating import MovieRating
+from movies.entities.Movie import Movie
+from movies.value_objects.MovieRating import MovieRating
 
 class TestMovieEntity(unittest.TestCase):
 
