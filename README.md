@@ -21,13 +21,13 @@ The project is organized into the following components:
 Contains the core business logic:
 - [x] `entities/`: Defines the main entities (e.g., `Movie`).
 - [x] `value_objects/`: Defines value objects (e.g., `MovieRating`).
-- [] `services/`: Contains domain services for complex operations.
-- [] `events/`: Defines domain events (future implementation).
+- [ ] `services/`: Contains domain services for complex operations.
+- [ ] `events/`: Defines domain events (future implementation).
 
 ### **Application**
 Coordinates use cases and application logic:
-- [] `commands/`: Handles user actions or requests (future implementation).
-- [] `queries/`: Handles data retrieval (future implementation).
+- [ ] `commands/`: Handles user actions or requests (future implementation).
+- [ ] `queries/`: Handles data retrieval (future implementation).
 
 ### **Infrastructure**
 Handles technical concerns like persistence:
@@ -37,7 +37,7 @@ Handles technical concerns like persistence:
 
 ### **Interfaces**
 Exposes the application to the outside world:
-- [] `api/`: RESTful or CLI interfaces for interacting with the system (future implementation).
+- [ ] `api/`: RESTful or CLI interfaces for interacting with the system (future implementation).
 
 ## Features
 
