@@ -11,6 +11,8 @@ class Movie:
     id: str = field(default_factory=lambda: str(uuid4()))
     ratings: List[MovieRating] = field(default_factory=list)
     genres: List[str] = field(default_factory=list)
+    duration: int = 0
+    release_date: str = ""
 
     def add_rating(self, rating: MovieRating):
         """Adds a new rating to the movie."""
