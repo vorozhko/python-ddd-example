@@ -44,5 +44,13 @@ class TestMovieEntity(unittest.TestCase):
         movie = Movie(title="Inception")
         self.assertEqual(movie.average_rating(), 0.0)  # No ratings, average is 0.0
 
+    def test_set_update_geners(self):
+        movieGenres = ['Sci-Fi', 'Cyberpunk', 'AI']
+        movie = Movie(title="Matrix", genres=movieGenres)
+        self.assertEqual(movie.genres, movieGenres)
+        movie.genres.remove('AI')
+        self.assertTrue('AI' not in movie.genres)
+
+
 if __name__ == "__main__":
     unittest.main()
