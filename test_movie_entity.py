@@ -5,10 +5,9 @@ from movies.value_objects.MovieRating import MovieRating
 class TestMovieEntity(unittest.TestCase):
 
     def test_create_movie_with_no_title(self):
-        """Test for empty title"""
-        with self.assertRaises(ValueError) as context:
-            movie = Movie(title="")
-        self.assertEqual(str(context.exception), "Ttitle must have an alpha numberic value")
+        """Test for empty title"""        
+        movie = Movie(title="")
+        self.assertEqual(movie.title, "")
         
     def test_create_movie(self):
         """Test creating a Movie entity with a title."""

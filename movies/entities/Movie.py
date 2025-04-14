@@ -16,17 +16,17 @@ class Movie(SQLModel, table=True):
     duration: int = 0
     release_date: str | None = None
 
-    # def add_rating(self, rating: MovieRating):
-    #     """Adds a new rating to the movie."""
-    #     if not isinstance(rating, MovieRating):
-    #         raise ValueError("Invalid rating. Must be a MovieRating object.")
-    #     self.ratings.append(rating)
+    def add_rating(self, rating: MovieRating):
+        """Adds a new rating to the movie."""
+        if not isinstance(rating, MovieRating):
+            raise ValueError("Invalid rating. Must be a MovieRating object.")
+        self.ratings.append(rating)
 
-    # def average_rating(self) -> float:
-    #     """Calculates the average score of all ratings."""
-    #     if not self.ratings:
-    #         return 0.0
-    #     return sum(rating.score for rating in self.ratings) / len(self.ratings)
+    def average_rating(self) -> float:
+        """Calculates the average score of all ratings."""
+        if not self.ratings:
+            return 0.0
+        return sum(rating.score for rating in self.ratings) / len(self.ratings)
     
     def __post_init__(self):
         if not self.title.isalpha():

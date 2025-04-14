@@ -19,7 +19,7 @@ The project is organized into the following components:
 
 ### **Domain**
 Contains the core business logic:
-- [x] `entities/`: Defines the main entities (e.g., `Movie`).
+- [x] `entities/`: Defines the main entities (e.g., `Movie`) with SQLModel as base class to support DB.
 - [x] `value_objects/`: Defines value objects (e.g., `MovieRating`).
 - [ ] `services/`: Contains domain services for complex operations.
 - [ ] `events/`: Defines domain events (future implementation).
@@ -32,7 +32,6 @@ Coordinates use cases and application logic:
 ### **Infrastructure**
 Handles technical concerns like persistence:
 - [x] `repositories/`: Implements data storage for aggregates (e.g., `MovieRepository`).
-- [x] `mappers/`: Maps domain models to database tables (e.g., `MovieMapper`, `MovieTable`).
 - [x] `database.py`: Manages database initialization and session handling.
 
 ### **Interfaces**
@@ -51,14 +50,14 @@ Exposes the application to the outside world:
   - Store and retrieve movies using a repository pattern.
   - Use `SQLModel` and SQLite for database persistence.
 - **Separation of Concerns**:
-  - Keep domain logic independent of infrastructure concerns using mappers.
+  - Keep domain logic independent of infrastructure concerns using repositories.
 
 ## How to Run the Project
 
 ### **1. Set Up the Environment**
 Install the required dependencies:
 ```bash
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
 ### Run the Application
